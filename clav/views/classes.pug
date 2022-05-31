@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    ul 
+        each elem in classes 
+            li
+                a(href= "/classes/" + elem.codigo)
+                    b= elem.codigo 
+                    span= elem.titulo
+
+    a(href= "/") Voltar

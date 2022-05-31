@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    table 
+        tr 
+            th Termo 
+            th ID da Classe
+            th Título da Classe 
+        each elem in content
+            tr 
+                td= elem.termo
+                td= elem.idClasse
+                td 
+                    a(href= "/classes/" + elem.idClasse)= elem.tituloClasse
+
+    a(href= "/") Voltar
